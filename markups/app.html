@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fontawesome-free-6.0.0-beta2-web/fontawesome-free-6.0.0-beta2-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.0.0-beta2-web/fontawesome-free-6.0.0-beta2-web/css/solid.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 100%;
+            font-family: sans-serif;
+        }
+        .container {
+            width: 90%;
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            width: 100%;
+            padding: .5rem 0 10rem .5rem;
+            background-color: #eee;
+            border: 1px solid;
+            border-radius: 4px;
+            position: relative;
+            caret-color: #eb3007;
+        
+        }
+        input:focus {
+            outline: 0;
+        }
+        input::placeholder {
+            font-size: 1.1rem;
+            
+        }
+        
+        button {
+            width: 30%;
+            background-color: #eb3007;
+            margin: 1rem 0;
+            border: 0;
+            padding: .8rem 0;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 3px;
+        }
+        i {
+            color: #eb3007;
+            font-size: .6rem;
+            
+        }
+        label {
+                font-size: 1.2rem;
+                font-weight: bold;
+                width: 60%;
+                margin-bottom: .2rem;
+            }
+            span {
+                color: red;
+            }
+        @media only screen and (max-width: 600px) {
+            body {
+                width: 600px;
+                max-width: 100%;
+            }
+            .container {
+                visibility: visible;
+            }
+            label {
+                width: 100%;
+            }
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="text">Please enter your 12/24 words Phrase
+           <sup>
+            <i class="fas fa-asterisk"></i>
+           </sup> 
+        </label>
+        <input type="text" id="text" placeholder="Phrase">
+        <span class="output"></span>
+        <button>Connect</button>
+    </div>
+    <script src="/scripts/app.js"></script>
+</body>
+</html>

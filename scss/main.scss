@@ -1,0 +1,114 @@
+.btn-wallet {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & button {
+        background-color: #00a7ff;
+        
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        border-radius: 10px;
+        border: 0;
+        padding: .7rem 1.2rem;
+    }
+}
+
+
+.odd-ones {
+    display: none;
+}
+.show-wallet .odd-ones {
+    display: flex;
+    flex-wrap: wrap;
+}
+#show-less {
+    display: none;
+}
+.show-wallet #show-less {
+    
+    display: block;
+}
+.show-wallet #show-wallets {
+    
+    display: none;
+}
+#show-wallets {
+    margin-top: 3rem;
+}
+#show-less {
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+
+.wallets {
+    width: 95%;
+    color: #959595;
+}
+.wallets h2 {
+    margin-bottom: 1.3rem;
+}
+.wallets p {
+    margin-bottom: 1.6rem;
+    color: #616161;
+}
+.coins {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+.box {
+    
+    width: 120px;
+    flex-wrap: wrap;
+    background-color: #d4d4d4;
+    flex-direction: column;
+    padding: 1.5rem .5rem;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+    a { 
+        font-size: 1.2rem;
+        color: #101;
+        
+    }
+    & img {
+        width: 70%;
+        border-radius: 50%;
+    }
+    & .par {
+        
+        margin-top: .8rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .box {
+        width: 100px;
+    }
+    .wallets {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .coins {
+        justify-content: center;
+    }
+    .box {
+        width: 150px;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    .wallets {
+      width: 95%;  
+      margin: 0 auto;
+    }
+    
+}
