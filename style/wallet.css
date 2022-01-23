@@ -10,40 +10,74 @@ body {
 }
 
 .container {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .container .head {
-  margin: 2rem 0;
+  margin-bottom: 10px;
 }
 
 .container .head h2 {
   font-size: 30px;
 }
 
-.container .head a {
-  color: #00a7dd;
-  font-size: 27px;
-  margin: 0 1.8rem 0 0;
-}
-
-.container .btns {
-  border-bottom: 2px solid #eee;
+.btns {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0 0 2rem 0;
-  padding: 0 0 .7rem 0;
+  padding: 8px;
+}
+
+.head h2 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #587087;
 }
 
 button {
   border: 0;
   background-color: transparent;
-  font-size: 20px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-button:active, button:focus {
-  border-bottom: 2px solid #00a7dd;
+button:focus {
+  color: white;
+  border-radius: 10px;
+  padding: 0 60px;
+  height: 30px;
+  background: #2a498d;
+  z-index: 1000;
+}
+
+.re {
+  color: white;
+  border-radius: 10px;
+  padding: 0 60px;
+  height: 30px;
+  background: #2a498d;
+}
+
+.re.age {
+  background-color: transparent;
+  color: black;
+}
+
+.key-cont {
+  margin-bottom: 2rem;
+}
+
+.key-cont button {
+  height: 30px;
+}
+
+.key-cont button:hover {
+  background-color: #ccc;
+  padding: 0 60px;
+  border-radius: 10px;
 }
 
 input[type=text] {
@@ -54,11 +88,17 @@ input[type=text] {
 
 input[type=button] {
   width: 100%;
-  background-color: #00a7dd;
   border: 0;
+  background: #2a498d;
   color: white;
   margin: 1.4rem 0;
-  padding: .7rem 0;
+  padding: .9rem 0;
+  text-transform: uppercase;
+  border-radius: 15px;
+}
+
+input[type=button]:focus, input[type=button]:active {
+  outline: 0;
 }
 
 p {
@@ -78,13 +118,22 @@ input {
 
 input:focus {
   outline: 0;
-  border: 4px solid #c1ebea;
+  border: 4px solid black;
+}
+
+#btns {
+  width: 90%;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 600px) {
   body {
     width: 600px;
     max-width: 100%;
+  }
+  button {
+    padding: 0;
+    font-size: 14px;
   }
   .container {
     width: 90%;
@@ -105,10 +154,33 @@ input:focus {
     align-items: center;
   }
   button:active, button:focus {
-    background-color: #00a7dd;
+    background: #2a498d;
     color: white;
     border-radius: 10px;
     border-bottom: 0;
+    padding: 5px 20px;
+  }
+  .re {
+    color: white;
+    border-radius: 10px;
+    padding: 5px 20px;
+    height: 30px;
+    background: #2a498d;
+  }
+  .re.age {
+    background-color: transparent;
+    color: black;
+  }
+  .key-cont {
+    margin-bottom: 2rem;
+  }
+  .key-cont button {
+    height: 30px;
+  }
+  .key-cont button:hover {
+    background: #2a498d;
+    padding: 5px 20px;
+    border-radius: 10px;
   }
 }
 /*# sourceMappingURL=wallet.css.map */

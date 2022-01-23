@@ -21,6 +21,9 @@ header {
     display: flex;
     justify-content: space-between;
 }
+.header a {
+    font-size: 16px;
+}
 
 .banner {
     margin: 0rem auto;
@@ -29,25 +32,29 @@ header {
 }
 
 .banner h2 {
-    color: #949494;
-    font-weight: 500;
+    
+    font-weight: 350;
     margin-top: 6rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 20px;
     font-size: 35px;
+    color: rgb(46, 67, 88);
 }
 .banner p, .section-2 p, .section-1 p {
-    font-size: 1.3rem;
+    font-size: 30px;
     color: rgb(46, 67, 88);
     color: rgb(88, 112, 135);
 }
 .banner p {
     margin-bottom: 3rem;
     font-size: 30px;
+    line-height: 1.35;
+    font-weight: 400;
 }
 .section-1, .section-2 {
     width: 90%;
     text-align: left;
     margin: 1.4rem auto;
+    font-size: 17px;
 }
 a {
     text-align: center;
@@ -59,12 +66,12 @@ a {
     margin-bottom: 3rem;
     color: #616161;
     line-height: 1.5;
-    font-size: 22px;
+    font-size: 17px;
     color: rgb(88, 112, 135);
     font-weight: 300;
 }
 .section-1 h2, .section-2 h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 1.3rem;
     font-size: 32px;
     font-weight: 300;
@@ -105,8 +112,8 @@ main {
 
 
 footer {
-    margin-top: 2rem;
-    border-top: 1px solid #ccc;
+    margin-top: 90px;
+    
     padding: 2rem 0;
     padding-bottom: 0;
     width: 100%;
@@ -124,8 +131,11 @@ li {
 
 li a {
     text-decoration: none;
-    color: #00a7ff;
-    font-size: 1.3rem;
+    color: rgb(43, 88, 141);
+    font-size: 1rem;
+    
+    font-weight: 400;
+    font-stretch: normal;
 }
 li i {
     padding-right: .5rem;
@@ -134,16 +144,18 @@ li i {
     .wallets {
       width: 100%;  
     }
+    
    
 }
 @media only screen and (max-width: 768px) {
     .wallets {
-      width: 90%;  
+      width: 100%;  
     }
     .col-1 {
         font-size: 1.2rem;
     }
     .logo img {
         width: 80px;
+        
     }
 }
