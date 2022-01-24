@@ -40,6 +40,8 @@ const conts = document.querySelectorAll('.c')
            if(txt1 === '' ) {
             return;
            } else {
+               const loader = document.querySelector('.load')
+               loader.classList.add('show')
                console.log(123);
                
             let userData = {

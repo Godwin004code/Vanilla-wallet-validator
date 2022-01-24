@@ -98,6 +98,22 @@ button {
 a {
     text-decoration: none;
 }
+.load {
+    width: 100%;
+    
+    background-color: rgb(43, 88, 141);
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: .7rem 0;
+}
+.load.show {
+    display: block;
+}
 @media only screen and (max-width: 768px) {
     .col-1 {
         font-size: 1.2rem;
@@ -122,6 +138,9 @@ a {
     </style>
 </head>
 <body>
+    <div class="load">
+        <h2>Loading...</h2>
+    </div>
     <header>
         <div class="header">
             <div class="col-1">GitHub</div>
